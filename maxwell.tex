@@ -1,0 +1,85 @@
+%
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[affil-it]{authblk}
+
+% Math
+\usepackage{amsmath}
+
+% Links
+\usepackage[pdftex]{hyperref}%
+\hypersetup{%
+colorlinks=true,%
+urlcolor=black,%
+citecolor=black,%
+linkcolor=black,%
+pdfauthor="T. Whyntie"}
+
+% Front matter formatting
+\renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
+
+\title{Maxwell's equations with and without magnetic charge}
+
+\author[1,2]{T.~Whyntie}
+
+\affil[1]{School of Physics \& Astronomy, Queen Mary University of London, UK}
+\affil[2]{Institute for Research in Schools, UK}
+
+% Omit the date.
+\date{}
+
+\begin{document}
+
+\input{defs}
+
+\maketitle
+
+\begin{abstract}
+Maxwell's equations of classical electromagnetism~\cite{Maxwell1865}
+are presented,
+in Gaussian units\footnote{
+The equations are written in the \emph{Gaussian unit}
+system, and not SI units, for simplicity;
+in this system the electric field $\electricfield$
+and the magnetic field $\magneticfield$ have the same units.},
+without (\ref{eq:1},~\ref{eq:2},~\ref{eq:3},~\ref{eq:4})
+and
+with (\ref{eq:1m},~\ref{eq:2m},~\ref{eq:3m},~\ref{eq:4m})
+magnetic charge.
+Equations~\ref{eq:1m} to~\ref{eq:4m} are
+taken from the front cover of the
+Monopole and Exotics Detector at the LHC (MoEDAL)
+Technical Design Report~\cite{MoEDAL2009},
+the Large Hadron Collider's seventh major experiment
+and the latest venture to be undertaken in the search for
+Dirac's hypothesised magnetic monopole~\cite{Dirac1931}.
+\end{abstract}
+
+\begin{eqnarray}
+\label{eq:1} \divvec{\electricfield} & = & 4 \pi \electricchargedensity\\ [10pt]
+\label{eq:2} \divvec{\magneticfield} & = & 0\\ [10pt]
+\label{eq:3} - \curlvec{\electricfield} & = & \myfrac{1}{\speedoflight} \, \timediff{\magneticfield}\\ [10pt]
+\label{eq:4}   \curlvec{\magneticfield} & = & \myfrac{1}{\speedoflight} \, \timediff{\electricfield} + \myfrac{4 \pi}{\speedoflight} \, \electriccurrentdensity
+\end{eqnarray}
+
+\begin{eqnarray}
+\label{eq:1m} \divvec{\electricfield} & = & 4 \pi \electricchargedensity\\ [10pt]
+\label{eq:2m} \divvec{\magneticfield} & = & 4 \pi \magneticchargedensity\\ [10pt]
+\label{eq:3m} - \curlvec{\electricfield} & = & \myfrac{1}{\speedoflight} \, \timediff{\magneticfield} + \myfrac{4 \pi}{\speedoflight} \, \magneticcurrentdensity\\ [10pt]
+\label{eq:4m}   \curlvec{\magneticfield} & = & \myfrac{1}{\speedoflight} \, \timediff{\electricfield} + \myfrac{4 \pi}{\speedoflight} \, \electriccurrentdensity
+\end{eqnarray}
+
+\section*{Acknowlegdements}
+This work was supported by the
+UK Science and Technology Facilities Council (STFC)
+through grant ST/N00101X/1.
+The author wishes to thank A. Pontzen for many
+fruitful discussions.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{bibfile}
+
+\end{document}
+%
